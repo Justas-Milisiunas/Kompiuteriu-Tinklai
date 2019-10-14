@@ -1,0 +1,25 @@
+#table-div {
+}
+
+#form-div {
+    width: 50%;
+    margin: 40px auto auto;
+}
+
+#page-content {
+    width: 50%;
+    margin: auto;
+}
+
+.headline {
+    text-align: center;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+#form-div button {
+    width: 100%;
+    margin-top: 20px;
+}
