@@ -1,0 +1,1 @@
+# 2 laboratorinio darbo 2 dalis
