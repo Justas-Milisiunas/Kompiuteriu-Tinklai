@@ -20,9 +20,11 @@ function insert_message()
 {
     global $db_connection;
 
+    $current_date = date("Y-m-d");
+
     $ip = get_client_ip();
-    $sql = "INSERT INTO messages (`name`, `email`, `message`, `receiver-email`, `ip`) 
-            VALUES ('{$_POST['name']}', '{$_POST['email']}', '{$_POST['message']}', '{$_POST['receiver-email']}', '{$ip}')";
+    $sql = "INSERT INTO messages (`name`, `email`, `message`, `receiver-email`, `ip`, `date`) 
+            VALUES ('{$_POST['name']}', '{$_POST['email']}', '{$_POST['message']}', '{$_POST['receiver-email']}', '{$ip}', '{$current_date}')";
     var_dump($sql);
     $result = mysqli_query($db_connection, $sql);
 

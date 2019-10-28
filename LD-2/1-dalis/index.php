@@ -20,6 +20,7 @@
                 <td scope="col">Message</td>
                 <td scope="col">Receiver-Email</td>
                 <td scope="col">Ip</td>
+                <td scope="col">Data</td>
             </tr>
             </thead>
             <tbody>
@@ -35,6 +36,7 @@
                 <td>{$msg[3]}</td>
                 <td>{$msg[4]}</td>
                 <td>{$msg[5]}</td>
+                <td>{$msg[6]}</td>
               </tr>";
             }
             ?>
@@ -42,20 +44,21 @@
         </table>
     </div>
     <div id="form-div">
+        <h2 class="headline">Įveskite naują žinutę</h2>
         <div class="form-group">
             <form method="post" action="data.php">
                 <label for="name">Siuntėjo vardas</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Jūsų vardas">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Jūsų vardas" required>
 
                 <label for="email">Siuntėjo e.paštas</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="Jūsų e.paštas">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Jūsų e.paštas" required>
 
                 <label for="receiver-email">Gavėjo e.paštas</label>
                 <input type="email" class="form-control" id="receiver-email" name="receiver-email"
-                       placeholder="Gavėjo e.paštas">
+                       placeholder="Gavėjo e.paštas" required>
 
                 <label for="message">Žinutė</label>
-                <textarea name="message" id="message" class="form-control" placeholder="Žinutė"></textarea>
+                <textarea name="message" id="message" class="form-control" placeholder="Žinutė" required></textarea>
 
                 <button type="submit" class="btn btn-primary btn-lg"> Siųsti</button>
             </form>
