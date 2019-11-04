@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 14, 2019 at 01:47 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.3
+-- Generation Time: Nov 04, 2019 at 07:11 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -34,16 +34,17 @@ CREATE TABLE `messages` (
   `email` varchar(50) COLLATE utf8_lithuanian_ci NOT NULL,
   `message` text COLLATE utf8_lithuanian_ci NOT NULL,
   `receiver-email` varchar(50) COLLATE utf8_lithuanian_ci NOT NULL,
-  `ip` varchar(20) COLLATE utf8_lithuanian_ci NOT NULL
+  `ip` varchar(20) COLLATE utf8_lithuanian_ci NOT NULL,
+  `date` varchar(20) COLLATE utf8_lithuanian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_lithuanian_ci;
 
 --
 -- Dumping data for table `messages`
 --
 
-INSERT INTO `messages` (`id`, `name`, `email`, `message`, `receiver-email`, `ip`) VALUES
-(10, 'Tomas', 'tomas@gmail.com', 'Sveikas lukai', 'lukas@gmail.com', '127.0.0.1'),
-(11, 'Lukas', 'lukas@gmail.com', 'Hello', 'tomas@gmail.com', '127.0.0.1');
+INSERT INTO `messages` (`id`, `name`, `email`, `message`, `receiver-email`, `ip`, `date`) VALUES
+(12, 'Tomas', 'tomas@gmail.com', 'Sveikas Pauliau', 'paulius@gmail.com', '127.0.0.1', '2019-11-04'),
+(13, 'Paulius', 'paulius@gmail.com', 'Labas', 'tomas@gmail.com', '127.0.0.1', '2019-11-04');
 
 --
 -- Indexes for dumped tables
@@ -63,7 +64,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
