@@ -4,6 +4,10 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <title>Universitetai </title>
     <style>
+        .universitetai {
+            font-weight: bold;
+        }
+
         #customers {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
             border-collapse: collapse;
@@ -15,9 +19,13 @@
             padding: 8px;
         }
 
-        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
-        #customers tr:hover {background-color: #ddd;}
+        #customers tr:hover {
+            background-color: #ddd;
+        }
 
         #customers th {
             padding-top: 12px;
@@ -32,17 +40,29 @@
 <body>
 <table id="customers">
     <tr>
-        <th>Institucija</th>    <th>Miestas</th>    <th>URL</th>  </tr>
-    <tr>
-        <td>Kauno technologijos universitetas</td>    <td>Kaunas</td>    <td>ktu.edu</td>
+        <th>Institucija</th>
+        <th>Miestas</th>
+        <th>URL</th>
     </tr>
     <tr>
-        <td>Vytauto Didžiojo universitetas</td>    <td>Kaunas</td>    <td>vdu.lt</td>
+        <td class="universitetai">Kauno technologijos universitetas</td>
+        <td>Kaunas</td>
+        <td><a href="https://ktu.edu/">ktu.edu</a></td>
     </tr>
     <tr>
-        <td>Vilniaus universitetas</td>    <td>Vilnius</td>    <td>vu.lt</td>  </tr>
+        <td class="universitetai">Vytauto Didžiojo universitetas</td>
+        <td>Kaunas</td>
+        <td><a href="https://www.vdu.lt">vdu.lt</a></td>
+    </tr>
     <tr>
-        <td>Vilniaus Gedimino technikos universitetas</td>    <td>Vilnius</td>    <td>vgtu.lt</td>
+        <td class="universitetai">Vilniaus universitetas</td>
+        <td>Vilnius</td>
+        <td><a href="https://www.vu.lt/">vu.lt</a></td>
+    </tr>
+    <tr>
+        <td class="universitetai">Vilniaus Gedimino technikos universitetas</td>
+        <td>Vilnius</td>
+        <td><a href="https://www.vgtu.lt/">vgtu.lt</a> </td>
     </tr>
 </table>
 <br>

@@ -10,12 +10,32 @@
 <body class="test">
 <div id="page-content">
     <div id="table-div">
+        <div class="form-group">
+            <form method="post" action="data.php">
+                <button name="show-all-messages" type="submit" class="btn btn-primary btn-lg"> Visos zinutes</button>
+            </form>
+        </div>
+
+        <div class="form-group">
+            <form method="post" action="data.php">
+                <label for="name">Siuntėjo vardas</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Jūsų vardas" required>
+
+                <label for="name">Siuntėjo pavardė</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Jūsų pavardė"
+                       required>
+
+                <button name="search" type="submit" class="btn btn-primary btn-lg"> Siųsti</button>
+            </form>
+        </div>
+
         <h2 class="headline">Žinutės</h2>
         <table class="table table-striped">
             <thead>
             <tr>
                 <td scope="col">#</td>
-                <td scope="col">Name</td>
+                <td scope="col">First Name</td>
+                <td scope="col">Last Name</td>
                 <td scope="col">Email</td>
                 <td scope="col">Message</td>
                 <td scope="col">Receiver-Email</td>
@@ -27,17 +47,21 @@
             <?php
             include "data.php";
 
-            $message = get_messages();
-            foreach ($message as $msg) {
-                echo "<tr>
+            if (isset($_SESSION['data'])) {
+                foreach ($_SESSION['data'] as $msg) {
+                    echo "<tr>
                 <td>{$msg[0]}</td>
                 <td>{$msg[1]}</td>
+                <td>{$msg[7]}</td>
                 <td>{$msg[2]}</td>
                 <td>{$msg[3]}</td>
                 <td>{$msg[4]}</td>
                 <td>{$msg[5]}</td>
                 <td>{$msg[6]}</td>
               </tr>";
+                }
+
+                $_SESSION['data'] = null;
             }
             ?>
             </tbody>
@@ -50,6 +74,10 @@
                 <label for="name">Siuntėjo vardas</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Jūsų vardas" required>
 
+                <label for="name">Siuntėjo pavardė</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Jūsų pavardė"
+                       required>
+
                 <label for="email">Siuntėjo e.paštas</label>
                 <input type="email" class="form-control" id="email" name="email" placeholder="Jūsų e.paštas" required>
 
@@ -60,7 +88,7 @@
                 <label for="message">Žinutė</label>
                 <textarea name="message" id="message" class="form-control" placeholder="Žinutė" required></textarea>
 
-                <button type="submit" class="btn btn-primary btn-lg"> Siųsti</button>
+                <button name="insert" type="submit" class="btn btn-primary btn-lg"> Siųsti</button>
             </form>
         </div>
     </div>
