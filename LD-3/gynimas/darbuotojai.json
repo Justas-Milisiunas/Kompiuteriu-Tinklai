@@ -1,0 +1,23 @@
+[
+  {
+    "Nr": "100",
+    "Pavarde": "Katinas",
+    "Vardas": "Jonas",
+    "Pareigos": "Direktorius",
+    "Atlyginimas": 1500
+  },
+  {
+   "Nr": "200",
+   "Pavarde": "Pavardenis",
+    "Vardas": "Vardenis",
+    "Pareigos": "Pavaduotojas",
+    "Atlyginimas": 1000
+  },
+  {
+   "Nr": "300",
+   "Pavarde": "Petrauskas",
+    "Vardas": "Tomas",
+    "Pareigos": "Valytojas",
+    "Atlyginimas": 650
+  }
+]
